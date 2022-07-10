@@ -1,0 +1,23 @@
+
+.central-section__modal-btn{
+    min-width: 140px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 10px 32px;
+    transition: background-color var(--transition-data);
+
+    &:hover,
+    &:focus {
+        background-color: #188CE8;
+        transition: background-color var(--transition-data);
+    }
+}

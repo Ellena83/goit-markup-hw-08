@@ -1,0 +1,84 @@
+.central-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    text-align: center;
+    max-width: 1600px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #2f303a;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/img/hero/img-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .central-section {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(/img/hero/img-hero-mobile@2x.jpg);
+    }
+}
+.central-section__inscription {
+    margin: 0 auto 30px auto;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .central-section {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+    url(/img/hero/img-hero-tablet.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .central-section {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(/img/hero/img-hero-tablet@2x.jpg);
+    }
+  }
+  .central-section__inscription {
+    width: 360px;
+  }
+} 
+
+@media screen and (min-width: 1200px) {
+    .central-section {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(/img/hero/img-hero-desktop.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .central-section {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(/img/hero/img-hero-desktop@2x.jpg);
+        }
+    }
+
+    .central-section__inscription {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
