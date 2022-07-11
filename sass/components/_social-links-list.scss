@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: var(--secondary-text-color);
+    background-color: rgba(255, 255, 255, 0.1);
     transition: background-color var(--transition-data);
 
         &:hover,
@@ -17,6 +17,9 @@
             background-color: var(--accent-color);
         }
 }
+
+
+
 .social-list__item {
     width: 44px;
     height: 44px;
@@ -29,36 +32,44 @@
 .social-list__icon {
     fill: #afb1b8;
     transition: fill var(--transition-data);
+}
 
-.social-list__link:hover &,
-.social-list__link:focus & {
-    fill: var(--secondary-text-color);
-}}
+.social-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-// .footer-social-link {
-//         background-color: rgba(255, 255, 255, 0.1);
-//         color: var(--secondary-text-color);
-//         transition: background-color var(--transition-data);
+.social-links-list__item:not(:last-child) {
+    margin-right: 10px;
+}
 
-//         &:hover,
-//         &:focus {
-//         background-color: var(--accent-color);
-//     }
-//     }
-//     .footer-social-link-icon {
-//         fill: var(--secondary-text-color);
-//     }
+.social-links-list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition-data);
 
-//     .social-links-list-item:not(:last-child) {
-//         margin-right: 10px;
-//     }
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        outline: none;
+    }
+}
 
-//     .social-links-list-link {
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         width: 44px;
-//         height: 44px;
-//         border-radius: 50%;
-//         background-color: rgba(255, 255, 255, 0.1);
-//     }
+.social-links-list__icon {
+    fill: rgba(255, 255, 255, 0.1);
+    transition: fill var(--transition-data);
+}
+
+.social-links-list__icon {
+
+    .social-links-list__link:hover &,
+    .social-links-list__link:focus & {
+        fill: #fff;
+    }
+}

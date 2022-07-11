@@ -1,6 +1,6 @@
 .logo {
     text-decoration: none;
-    color: var(--accent-color);
+    color: #2196f2;
     font-family: "Raleway", sans-serif;
     font-size: 26px;
     letter-spacing: 0.03em;
@@ -9,11 +9,11 @@
 }
 
 .logo-white-theme {
-    color: var(--primary-text-color);
+    color: #212121;
 }
 
-.logo-dark-theme {
-    color: var(--secondary-text-color);
+.footer__logo-dark-theme {
+    color: #fff;
     margin-bottom: 20px;
 }
 
