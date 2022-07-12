@@ -3,6 +3,7 @@
     background-color: #2F303A;
 }
 .footer {
+    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color:#2F303A;
@@ -10,6 +11,7 @@
         text-align: center;
     }
 }
+
 .footer__logo {
     margin-bottom: 20px;
 }
@@ -65,32 +67,38 @@
     color: #fff;
 }
 
-@media screen and (min-width:480px) {
+@media screen and (max-width:480px) {
     .container {
     width: 480px;
     margin-left: auto;
-    margin-right: auto;;
-    
+    margin-right: auto;  
 }
 }
 .subscribe__form {
     @media screen and (max-width: 1199px) {
-        
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
+@media screen and (max-width: 1199px) {
+    .subscribe {
+        text-align: center;
+    }
+}
 .subscribe__title {
-    display: block;
     margin-bottom: 20px;
     margin-top: 60px;
+    @media screen and (min-width:1200px) {
+    margin-left: 93px;
+    }
     font-weight: 700;
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #fff;
+    text-align:left;
 }
 .subscribe__input {
     width: 100%;
@@ -150,19 +158,58 @@
         width: 100%;
     }
 }
-
 @media screen and (min-width: 768px) {
-    .footer-container {
+.logo {
+    margin-right: 93;
+    margin-left: auto;
+}
+}
+    
+@media screen and (min-width: 768px) {
+    .footer-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: baseline;
     }
-
+.footer__logo {
+    margin-left: auto;
+}
     @media screen and (max-width: 1199px) {
         .subscribe__input {
             width: 450px;
         }
     }
 }
+@media screen and (min-width: 1200px) {
+    .footer-container {
+        justify-content: flex-start;
+    }
+
+    .footer-container__left {
+        flex-grow: 1;
+    }
+
+    
+
+    .address-list__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    .footer-socials {
+        margin-left: 70px;
+    }
+  
+    .subscribe__form {
+        display: flex;
+        flex-direction: row;
+        margin-left: 93px;
+    }
+
+    .subscribe__input {
+        width: 358px;
+        margin-right: 12px;
+    }
+}
+
 
