@@ -97,10 +97,8 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 1.2;
     letter-spacing: 0.02em;
-    color: #757575;
+    color:var(--accent-text-color);
     transition: color var(--transition-data);
 
     &:focus,
@@ -125,9 +123,12 @@
         transition: fill var(--transition-data);
         }
 }
-//  @media screen and (min-width:768px) and (max-width:1199) {
-
-// }
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .head-adress__link{
+    font-size: 12px;
+        line-height: 1.2;
+    }
+}
   @media screen and (min-width: 1200px) {
       .head-adress {
           flex-direction: row;
@@ -139,8 +140,11 @@
           margin-right: 50px;
           margin-bottom: 0;
       }
+          .head-adress__link {
+              font-size: 14px;
+              line-height: 1.1;
   }
-
+  }
 
 // мой код
 
