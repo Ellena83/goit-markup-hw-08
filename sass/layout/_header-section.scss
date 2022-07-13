@@ -38,6 +38,9 @@
 }
 
 @media screen and (min-width: 768px) {
+    .page-header {
+            padding: 0;
+        }
     .mobile-menu-open-btn {
         display: none;
     }
@@ -49,7 +52,7 @@
         padding: 0;
         }
     
-    .logo {
+    .logo-header {
         margin-right: 93px;
     }
 
@@ -156,11 +159,7 @@
 //          }
 
 
-// .page-header {
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     border-bottom: 1px solid #ececec;
-// }
+
 
 // @media screen and (max-width:767px) {
 

@@ -21,11 +21,11 @@
         <div class="container page-header__container">
             <nav class="nav-header">
     
-                <a class="logo " href="./index.html">Web<span class="logo  logo-white-theme">Studio</span></a>
+                <a class="logo logo-header" href="./index.html">Web<span class="logo  logo-white-theme">Studio</span></a>
                 <ul class="navigation-menu list">
-                    <li class="navigation-menu__item"><a class="link navigation-menu__link current"
-                            href="./index.html">Студия</a></li>
                     <li class="navigation-menu__item"><a class="link navigation-menu__link"
+                            href="./index.html">Студия</a></li>
+                    <li class="navigation-menu__item"><a class="link navigation-menu__link current"
                             href="./portfolio.html">Портфолио</a></li>
                     <li class="navigation-menu__item"><a class="link navigation-menu__link" href="/">Контакты</a></li>
                 </ul>
@@ -66,9 +66,11 @@
                 </div>
                 <div class="mobile-menu__contact-list">
                     <ul class="mobile-menu__nav-list">
-                        <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-phone" href=""></a>+38 096 111
+                        <li class="mobile-menu__contact-item"><a
+                                class="mobile-menu__contact-link  mobile-menu__contact-link--phone" href=""></a>+38 096 111
                             11 11</li>
-                        <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-email"
+                        <li class="mobile-menu__contact-item"><a
+                                class="mobile-menu__contact-link  mobile-menu__contact-link--email"
                                 href=""></a>info@devstudio.com</li>
                     </ul>
     
@@ -542,14 +544,14 @@
             <address class="address">
                 <ul class="address-list list">
                     <li class="address-list__item">
-                        <a class="link address-list__link" href="https://bit.ly/3O5jqAV" target="_blank"
-                            rel="noopener noreferrer">г. Киев, пр-т Леси Украинки,26</a>
+                        <a class="link address-list__link address-list__link--white" href="https://bit.ly/3O5jqAV"
+                            target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки,26</a>
                     </li>
                     <li class="address-list__item">
-                        <a class="link address-list__contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        <a class="link address-list__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
                     <li class="address-list__item">
-                        <a class="link address-list__contact" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <a class="link address-list__link" href="tel:+380961111111">+38 096 111 11 11</a>
                     </li>
                 </ul>
             </address>
@@ -579,7 +581,7 @@
                         </svg>
                     </a>
                 </li>
-                <li class="social-links-list-__item">
+                <li class="social-links-list__item">
                     <a class="social-links-list__link footer-social-link" href="">
                         <svg class="social-links-list__icon" width="20" height="20">
                             <use href="./img/sprite.svg#icon-linkedin-1"></use>
@@ -588,17 +590,20 @@
                 </li>
             </ul>
         </div>
-        <div class="subscribe">
-            <p class="subscribe__title">Подпишитесь на рассылку</p>
-            <form class="subscribe__form">
-                <input class="subscribe__input" type="email" name="subscribe-email" placeholder="E-mail" />
+
+        <form class="subscribe__form">
+            <label class="subscribe__label" for="subscribe_mail">Подпишитесь на рассылку</label>
+            <div class="subscribe-box">
+                <input class="subscribe__input" type="email" id="subscribe_mail" name="subscribe-email"
+                    placeholder="E-mail" />
                 <button class="subcribe__button" type="submit">Подписаться
                     <svg class="subscribe__icon" width="24" height="24">
                         <use href="./img/icons.svg#icon-icon-send"></use>
                     </svg>
                 </button>
-            </form>
-        </div>
+            </div>
+        </form>
+
     </div>
 </footer>
     <script src="./js/modal.js"></script>
