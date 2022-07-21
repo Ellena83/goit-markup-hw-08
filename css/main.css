@@ -35,24 +35,19 @@ p {
 
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.list {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .link {
   text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -225,12 +220,6 @@ ol {
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop.is-hidden .modal {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.9);
-}
 
 .modal {
   background-color: var(--secondary-text-color);
@@ -241,6 +230,11 @@ ol {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform var(--transition-data), opacity var(--transition-data), visibility var(--transition-data);
+}
+.modal.is-hidden .modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal__close-button {
@@ -258,7 +252,12 @@ ol {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal__close-button:hover, .modal__close-button:focus {
+
+.modal__close-button-icon {
+  fill: #000;
+  transition: fill var(--transition-data);
+}
+modal__close-button:hover .modal__close-button-icon, modal__close-button:focus .modal__close-button-icon {
   fill: var(--accent-color);
   transition: color var(--transition-data);
 }
@@ -281,20 +280,6 @@ ol {
   padding: 40px;
 }
 
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: var(--secondary-text-color);
-}
-@media screen and (max-width: 1199px) {
-  .modal {
-    width: 93%;
-    max-width: 450px;
-    max-height: 100vh;
-  }
-}
-
 .contact-form__title {
   font-weight: 700;
   font-size: 20px;
@@ -303,6 +288,17 @@ ol {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   margin-bottom: 12px;
+}
+
+.contact-form__field-key {
+  font-family: inherit;
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--accent-text-color);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .contact-form__input {
@@ -314,6 +310,9 @@ ol {
   margin-bottom: 10px;
   padding-left: 42px;
   border-color: rgba(33, 33, 33, 0.2);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
   transition: border-color var(--transition-data);
 }
 .contact-form__input:focus {
@@ -323,9 +322,8 @@ ol {
 }
 
 .contact-form__icon {
-  display: block;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 12px;
   transform: translateY(-50%);
   fill: var(--primary-text-color);
@@ -347,17 +345,6 @@ ol {
   cursor: pointer;
   margin-right: 7px;
   transition: border var(--transition-data), fill var(--transition-data);
-}
-
-.contact-form__field-key {
-  font-family: inherit;
-  font-weight: 400px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: var(--accent-text-color);
-  display: block;
-  margin-bottom: 4px;
 }
 
 .contact-form__field-container {
@@ -438,9 +425,10 @@ ol {
   transition: background-color var(--transition-data), box-shadow var(--transition-data);
 }
 .contact-form__btn:hover, .contact-form__btn:focus {
-  background-color: #188CE8;
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--transition-data);
+  transition: var(--transition-data);
 }
 
 @media screen and (max-width: 1199px) {
@@ -612,6 +600,8 @@ ol {
 }
 .page-header {
   border-bottom: 1px solid #ececec;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .page-header__container {
@@ -834,7 +824,6 @@ ol {
 }
 .central-section__modal-btn:hover, .central-section__modal-btn:focus {
   background-color: #188ce8;
-  transition: background-color var(--transition-data);
 }
 
 @media screen and (max-width: 1199px) {
@@ -946,6 +935,8 @@ ol {
 .team-list__box {
   padding-top: 30px;
   background-color: var(--secondary-text-color);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   text-align: center;
   background-color: var(#fff);
 }
@@ -974,6 +965,9 @@ ol {
 }
 
 @media screen and (max-width: 767px) {
+  .team-list {
+    width: 100%;
+  }
   .team-list__item {
     width: 100%;
   }
@@ -1081,6 +1075,7 @@ ol {
 @media screen and (max-width: 1199px) {
   .clients-container__title {
     margin-bottom: 30px;
+    font-size: 28px;
   }
 }
 
@@ -1131,7 +1126,6 @@ ol {
 
 .address-list {
   flex-direction: column;
-  align-items: flex-start;
   margin-top: 20px;
 }
 
@@ -1260,6 +1254,9 @@ ol {
   .subscribe__input {
     width: 358px;
     margin-right: 12px;
+  }
+  .address-list {
+    align-items: flex-start;
   }
 }
 .projects-box {
